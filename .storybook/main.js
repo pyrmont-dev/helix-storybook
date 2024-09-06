@@ -15,6 +15,7 @@ const config = {
     name: "@storybook/html-vite",
     options: {},
   },
+  staticDirs: ['../styles/', { from: "../fonts", to: "/fonts" }],
 };
 export default config;
 

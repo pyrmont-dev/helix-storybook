@@ -1,4 +1,4 @@
-import decorate from './cards';
+import decorate from './cards.js';
 import './cards.css';
 
 export default {
@@ -8,13 +8,16 @@ export default {
 const Template = () => {
   // Create a sample block element
   const block = document.createElement('div');
+  // add class of blocks
+  block.classList.add('cards');
   block.innerHTML = `
     <div>
       <div>
           <img src="https://via.placeholder.com/150" alt="Sample Image">
       </div>
       <div>
-        <p>Sample text content</p>
+        <p><strong>Unmatched speed</strong></p>
+        <p>AEM is the fastest way to publish, create, and serve websites</p>
       </div>
     </div>
   `;
