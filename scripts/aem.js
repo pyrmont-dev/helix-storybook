@@ -565,6 +565,7 @@ async function loadBlock(block) {
         (async () => {
           try {
             const mod = await import(
+              /* @vite-ignore */
               `${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.js`
             );
             if (mod.default) {
