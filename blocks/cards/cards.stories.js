@@ -6,21 +6,41 @@ export default {
 };
 
 const Template = () => {
-  // Create a sample block element
   const block = document.createElement('div');
-  // add class of blocks
   block.classList.add('cards');
-  block.innerHTML = `
-    <div>
-      <div>
-          <img src="https://via.placeholder.com/150" alt="Sample Image">
+
+  // Array of card data
+  const cardData = [
+    {
+      imgSrc: 'https://via.placeholder.com/150',
+      title: 'Unmatched speed',
+      description: 'AEM is the fastest way to publish, create, and serve websites',
+    },
+    {
+      imgSrc: 'https://via.placeholder.com/150',
+      title: 'Seamless Integration',
+      description: 'Easily integrate with other Adobe products',
+    },
+    {
+      imgSrc: 'https://via.placeholder.com/150',
+      title: 'Scalability',
+      description: 'Scale your content effortlessly with AEM',
+    },
+  ];
+
+  cardData.forEach((data) => {
+    block.innerHTML += `
+      <div class="card">
+        <div>
+          <img src="${data.imgSrc}" alt="Sample Image">
+        </div>
+        <div>
+          <p><strong>${data.title}</strong></p>
+          <p>${data.description}</p>
+        </div>
       </div>
-      <div>
-        <p><strong>Unmatched speed</strong></p>
-        <p>AEM is the fastest way to publish, create, and serve websites</p>
-      </div>
-    </div>
-  `;
+    `;
+  });
 
   // Apply the decorate function
   decorate(block);
