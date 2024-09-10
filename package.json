@@ -7,6 +7,7 @@
     "lint:js": "eslint .",
     "lint:css": "stylelint blocks/**/*.css styles/*.css",
     "lint": "npm run lint:js && npm run lint:css",
+    "build:css": "postcss styles/*.css -d dist/css",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -20,6 +21,9 @@
     "url": "https://github.com/adobe/aem-boilerplate/issues"
   },
   "homepage": "https://github.com/adobe/aem-boilerplate#readme",
+  "browserslist": [ 
+     "defaults"  
+  ],
   "devDependencies": {
     "@babel/eslint-parser": "7.25.1",
     "@chromatic-com/storybook": "^1.8.0",
@@ -31,10 +35,14 @@
     "@storybook/html": "^8.2.9",
     "@storybook/html-vite": "^8.2.9",
     "@storybook/test": "^8.2.9",
+    "autoprefixer": "^10.4.20",
     "eslint": "8.57.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-storybook": "^0.8.0",
+    "postcss": "^8.4.45",
+    "postcss-import": "^16.1.0",
+    "postcss-nested": "^6.2.0",
     "storybook": "^8.2.9",
     "stylelint": "16.8.2",
     "stylelint-config-standard": "36.0.1"
