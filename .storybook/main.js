@@ -11,6 +11,7 @@ const config = {
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
     '@storybook/addon-a11y',
+    '@whitespace/storybook-addon-html',
   ],
   framework: {
     name: "@storybook/html-vite",
